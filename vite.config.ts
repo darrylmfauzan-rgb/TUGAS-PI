@@ -8,6 +8,10 @@ export default defineConfig(({ mode }) => ({
   root: path.resolve(__dirname),
   build: {
     outDir: "dist",
+    emptyOutDir: true,
+    rollupOptions: {
+      input: path.resolve(__dirname, "index.html"),
+    },
   },
   server: {
     host: "::",
